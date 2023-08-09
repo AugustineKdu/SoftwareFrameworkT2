@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const app = express();
 
+app.use(express.static(path.join(__dirname, 'week3')));
+
 const users = [
     { email: "email1@com.au", password: "123" },
     { email: "email2@com.au", password: "456" },
@@ -10,12 +12,12 @@ const users = [
 
 // Homepage route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'www', 'form.html'));
+    res.sendFile(path.join(__dirname, 'week3', 'form.html'));
 });
 
 // Account page route
 app.get('/account', (req, res) => {
-    res.sendFile(path.join(__dirname, 'www', 'account.html'));
+    res.sendFile(path.join(__dirname, 'week3', 'account.html'));
 });
 
 // Login endpoint
