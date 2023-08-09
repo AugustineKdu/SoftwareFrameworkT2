@@ -12,12 +12,12 @@ const users = [
 
 // Homepage route
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'week3', 'form.html'));
+    res.sendFile(path.join(__dirname, 'index.html'));
 });
 
 // Account page route
 app.get('/account', (req, res) => {
-    res.sendFile(path.join(__dirname, 'week3', 'account.html'));
+    res.sendFile(path.join(__dirname, 'account.html'));
 });
 
 // Login endpoint
